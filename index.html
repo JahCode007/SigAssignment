@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bon Bagay Café — Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Bon Bagay Café</a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" onclick="
+        const u=document.getElementById('primary-nav'); 
+        const open=u.classList.toggle('open'); this.setAttribute('aria-expanded', open);
+      ">Menu</button>
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu & Pricing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
+  <header class="site-header">
+    <div class="container banner-text">
+      <h1 class="title">Bon Bagay Café</h1>
+      <p class="subtitle">by Jameel Jean‑Pierre • Afro‑Haitian flavors, modern vibes</p>
+      <p style="margin-top:1rem;">
+        <a class="btn" href="menu.html">Explore the Menu</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="section-title">Welcome</h2>
+      <p class="lead">
+        We blend bold Haitian notes with a modern third‑wave café experience. From single‑origin espresso to island‑inspired pastries,
+        every bite says <em>bon bagay</em>—“good stuff.”
+      </p>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Popular Right Now</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="images/coffee.png" alt="Signature coffee" />
+          <div class="p">
+            <span class="badge">Barista pick</span>
+            <h3>Kompa Latte</h3>
+            <p class="small">Espresso, steamed milk, raw cane syrup, warm spice.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/pastry.png" alt="House pastry" />
+          <div class="p">
+            <h3>Douce Coconut Roll</h3>
+            <p class="small">Butter roll with toasted coconut and vanilla glaze.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/sandwich.png" alt="Panini" />
+          <div class="p">
+            <h3>Griot Panini</h3>
+            <p class="small">Citrus‑marinated pork, pikliz slaw, pressed baguette.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="section-title">Visit Us</h2>
+      <p class="small">123 Market Street, Woburn, MA • Open daily 7am–6pm • <a href="mailto:jameel@example.com">jameel@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> Bon Bagay Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
