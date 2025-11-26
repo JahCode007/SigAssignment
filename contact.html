@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bon Bagay Café — Contact &amp; Feedback</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Bon Bagay Café</a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" onclick="
+        const u=document.getElementById('primary-nav'); 
+        const open=u.classList.toggle('open'); this.setAttribute('aria-expanded', open);
+      ">Menu</button>
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu &amp; Pricing</a></li>
+          <li><a href="services.html">Support Services</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container banner-text">
+      <h1 class="title">Contact &amp; Feedback</h1>
+      <p class="subtitle">Tell us how we&apos;re doing or request support before your visit.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="section-title">Reach Out to Bon Bagay Café</h2>
+      <p class="lead">
+        Use this form to ask questions about the menu, share feedback, or report maintenance issues. 
+        Required fields use HTML5 validation so we get clear, accurate information from you.
+      </p>
+
+      <form action="#" method="post" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Full Name<span class="required">*</span></label>
+          <input type="text" id="name" name="name" required minlength="2" maxlength="80" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address<span class="required">*</span></label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Mobile Phone<span class="required">*</span></label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="555-123-4567"
+            pattern="\d{3}-\d{3}-\d{4}"
+            required
+          />
+          <small>Format: 555-123-4567</small>
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for Contact<span class="required">*</span></label>
+          <select id="reason" name="reason" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="general">General Question</option>
+            <option value="order">Order or Catering Request</option>
+            <option value="maintenance">Facility / Maintenance Issue</option>
+            <option value="accessibility">Accessibility Support</option>
+            <option value="feedback">Feedback or Compliment</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Preferred Contact Method<span class="required">*</span></legend>
+          <label>
+            <input type="radio" name="contact_method" value="email" required /> Email
+          </label>
+          <label>
+            <input type="radio" name="contact_method" value="phone" required /> Phone
+          </label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="date">Preferred Visit Date</label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" name="time" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message<span class="required">*</span></label>
+          <textarea 
+            id="message" 
+            name="message" 
+            rows="5" 
+            required 
+            minlength="10" 
+            maxlength="500"></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label>
+            <input type="checkbox" name="agree" required />
+            I confirm that the details I am submitting are accurate so the café can respond correctly.
+          </label>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+        <button type="reset" class="btn btn-secondary">Reset</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> Bon Bagay Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

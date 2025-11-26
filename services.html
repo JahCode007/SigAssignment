@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bon Bagay Café — Support Services</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">Bon Bagay Café</a>
+      <button class="menu-toggle" aria-controls="primary-nav" aria-expanded="false" onclick="
+        const u=document.getElementById('primary-nav'); 
+        const open=u.classList.toggle('open'); this.setAttribute('aria-expanded', open);
+      ">Menu</button>
+      <nav>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu &amp; Pricing</a></li>
+          <li><a href="services.html" aria-current="page">Support Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container banner-text">
+      <h1 class="title">Support &amp; Local Services</h1>
+      <p class="subtitle">Everything that supports your visit to Bon Bagay Café and the neighborhood around it.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h2 class="section-title">On‑Site &amp; Nearby Services</h2>
+      <p class="lead">
+        In addition to coffee and food, our guests rely on parking, transit, cleaning, and nearby businesses to 
+        make their visit smooth. These categories summarize the most important support services and when they are available.
+      </p>
+
+      <ol class="service-list">
+        <li>
+          <h3>Transportation</h3>
+          <ul>
+            <li><strong>MBTA Bus Route 354</strong> — Weekdays, 6:00 a.m.–9:00 p.m. • Direct to downtown Boston.</li>
+            <li><strong>Market Street Parking Lot</strong> — Mon–Sun, 6:00 a.m.–11:00 p.m. • Free for the first 2 hours.</li>
+            <li><strong>Bike Racks at Café Entrance</strong> — Available daily during café hours.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Maintenance &amp; Facilities</h3>
+          <ul>
+            <li><strong>Building Maintenance Team</strong> — Mon–Fri, 8:00 a.m.–4:00 p.m. • Handles HVAC, lighting, and seating repairs.</li>
+            <li><strong>Equipment Service Vendor</strong> — Tue &amp; Thu, 7:00 a.m.–10:00 a.m. • Espresso machines &amp; refrigeration.</li>
+            <li><strong>Emergency Facilities Hotline</strong> — 24/7 support for water leaks, power issues, or safety concerns.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Cleaning &amp; Sanitation</h3>
+          <ul>
+            <li><strong>Dining Area Reset</strong> — Daily, 6:30 a.m., 2:00 p.m., and 7:30 p.m. • Tables sanitized and floors spot‑cleaned.</li>
+            <li><strong>Restroom Checks</strong> — Every 90 minutes during café hours.</li>
+            <li><strong>Waste &amp; Recycling Pickup</strong> — Mon, Wed, Fri, 7:00 a.m.–9:00 a.m.</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Local Dining &amp; Community Spots</h3>
+          <ul>
+            <li><strong>Kreyol Kitchen</strong> — Full‑service Caribbean restaurant • Tue–Sun, 12:00 p.m.–9:00 p.m.</li>
+            <li><strong>Woburn Public Library Café Corner</strong> — Quiet study space with light snacks • Mon–Thu, 10:00 a.m.–8:00 p.m.</li>
+            <li><strong>Horn Pond Walking Path</strong> — Open daily during daylight hours for pre‑ or post‑coffee walks.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="y"></span> Bon Bagay Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
